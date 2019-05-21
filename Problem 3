@@ -1,1 +1,47 @@
+#include <iostream>
+#include <conio.h>
+#include <cstring>
+using namespace std;
+
+int main ()
+{
+	int i, j;
+	char arr[50], temp;
+	
+	cout << "Enter Array: ";
+	cin >>  arr;
+	
+	cout << "Reverse Order: " ;
+	
+	int size = strlen(arr);
+	for (i = 0; i < size; i++)
+	{
+		for (j = i+1; j < size; j++)
+		{
+			if (arr[i] > arr[j])
+			{
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+	
+	for(i = 0; i < size; i++)
+	{
+		cout << arr[i];
+	}
+	
+	cout << endl;
+	
+	cout << "Size: " << size;
+	
+	
+	_getch();
+	return 0;
+}
+
+
+
+
 
